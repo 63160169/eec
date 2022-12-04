@@ -1,0 +1,68 @@
+.status-card {
+    margin: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 2px;
+  }
+  /* .status-card.status-card--hoverable:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  } */
+  .status-card .status-card__content {
+    padding: 5px;
+    margin-left: 90px;
+  }
+  
+  .status-card__icon {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    float: left;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 90px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  .status-card__content .number {
+    font-weight: 700;
+    font-size: 27px;
+    color: RGBA(0, 0, 0, 0.87);
+  }
+  .status-card__content .title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: RGBA(0, 0, 0, 0.54);
+  }
+  .status-card__content .description {
+    margin-top: 18px;
+    font-size: 12px;
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: RGBA(0, 0, 0, 0.54);
+  }
+  
+  .status-card__icon--success {
+    background-color: #33b86c;
+  }
+  
+  .status-card__icon--info {
+    background-color: #29b6f6;
+  }
+  
+  .status-card__icon--warning {
+    background-color: #ffd740;
+  }
+  
+  .status-card__icon--danger {
+    background-color: #ef5350;
+  }

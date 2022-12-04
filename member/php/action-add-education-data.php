@@ -1,0 +1,36 @@
+<?php 
+       session_start(); 
+       require ('config.php'); 
+       require ("function-generic.php");
+       require ("function-user-data.php");
+       require ("function-education-data.php");
+       require ("PHPMailer_v5.0.2/class.phpmailer.php");
+       require ("function-email.php"); 
+
+       $uid = $_POST["uid"];
+       $ins_id = $_POST["institute"]; 
+       $faculty = $_POST["faculty"]; 
+       $major = $_POST["major"]; 
+       $date = $_POST["grad_date"];
+       $deg_id = $_POST["degree"]; 
+       
+       $add = add_user_education($con, $uid, $ins_id, $deg_id, $faculty, $major, $date);
+
+       if($add){
+            //alert_update($con,$_SESSION['user'],$smail,$spass);
+            ?> 
+        <script>
+            alert("แก้ไขข้อมูลสำเร็จ");
+            window.location.href = "../";
+        </script>
+        <?php 
+    }
+    else{
+        ?> 
+        <script>
+            alert("ไม่สามารถแก้ไขข้อมูลได้");
+            //window.location.href = "../";
+        </script>
+        <?php
+       }
+?> 
